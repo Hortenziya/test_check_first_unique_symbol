@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  app:
+    image: test-bad-app
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      APP_PORT: 6001
+    ports:
+      - "6001:6001"

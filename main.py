@@ -1,3 +1,4 @@
+import os
 
 from flask import Flask, request, render_template
 
@@ -33,6 +34,6 @@ def get_unique_symbol(lists_of_symbol):
 
 
 if __name__ == '__main__':
-    app.run(port=6001)
+    app.run(port=os.getenv("APP_PORT", 80), host='0.0.0.0')
 
 
